@@ -1,4 +1,4 @@
-/* Copyright (C) 1999-2003, 2005-2006, 2008-2011 Free Software Foundation, Inc.
+﻿/* Copyright (C) 1999-2003, 2005-2006, 2008-2011 Free Software Foundation, Inc.
    This file is part of the GNU LIBICONV Library.
 
    The GNU LIBICONV Library is free software; you can redistribute it
@@ -73,7 +73,7 @@ typedef void* iconv_t;
    have EILSEQ in a different header.  On these systems, define EILSEQ
    ourselves. */
 #ifndef EILSEQ
-#define EILSEQ @EILSEQ@
+#define EILSEQ 42
 #endif
 
 

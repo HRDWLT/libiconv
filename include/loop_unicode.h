@@ -35,7 +35,8 @@ static int unicode_transliterate (conv_t cd, ucs4_t wc,
       state_t backup_state = cd->ostate;
       unsigned char* backup_outptr = outptr;
       size_t backup_outleft = outleft;
-      int i, sub_outcount;
+      int i;
+	  size_t sub_outcount;
       for (i = 0; i < ret; i++) {
         if (outleft == 0) {
           sub_outcount = RET_TOOSMALL;
@@ -79,7 +80,8 @@ static int unicode_transliterate (conv_t cd, ucs4_t wc,
           state_t backup_state = cd->ostate;
           unsigned char* backup_outptr = outptr;
           size_t backup_outleft = outleft;
-          int i, sub_outcount;
+          int i;
+		  size_t sub_outcount;
           for (i = 0; i < 2; i++) {
             if (outleft == 0) {
               sub_outcount = RET_TOOSMALL;
@@ -127,7 +129,7 @@ static int unicode_transliterate (conv_t cd, ucs4_t wc,
       unsigned char* backup_outptr = outptr;
       size_t backup_outleft = outleft;
       unsigned int i;
-      int sub_outcount;
+      size_t sub_outcount;
       for (i = 0; i < num; i++) {
         if (outleft == 0) {
           sub_outcount = RET_TOOSMALL;
@@ -200,7 +202,7 @@ static void mb_to_uc_write_replacement (const unsigned int *buf, size_t buflen,
     size_t outleft = plocals->l_outbytesleft;
     for (; buflen > 0; buf++, buflen--) {
       ucs4_t wc = *buf;
-      int outcount;
+      size_t outcount;
       if (outleft == 0) {
         plocals->l_errno = E2BIG;
         break;
@@ -279,8 +281,8 @@ static size_t unicode_loop_convert (iconv_t icd,
   while (inleft > 0) {
     state_t last_istate = cd->istate;
     ucs4_t wc;
-    int incount;
-    int outcount;
+    size_t incount;
+    size_t outcount;
     incount = cd->ifuncs.xxx_mbtowc(cd,&wc,inptr,inleft);
     if (incount < 0) {
       if ((unsigned int)(-1-incount) % 2 == (unsigned int)(-1-RET_ILSEQ) % 2) {
@@ -446,7 +448,7 @@ static size_t unicode_loop_reset (iconv_t icd,
       if (cd->ifuncs.xxx_flushwc(cd, &wc)) {
         unsigned char* outptr = (unsigned char*) *outbuf;
         size_t outleft = *outbytesleft;
-        int outcount = cd->ofuncs.xxx_wctomb(cd,outptr,wc,outleft);
+        size_t outcount = cd->ofuncs.xxx_wctomb(cd,outptr,wc,outleft);
         if (outcount != RET_ILUNI)
           goto outcount_ok;
         /* Handle Unicode tag characters (range U+E0000..U+E007F). */
@@ -511,7 +513,7 @@ static size_t unicode_loop_reset (iconv_t icd,
     if (cd->ofuncs.xxx_reset) {
       unsigned char* outptr = (unsigned char*) *outbuf;
       size_t outleft = *outbytesleft;
-      int outcount = cd->ofuncs.xxx_reset(cd,outptr,outleft);
+      size_t outcount = cd->ofuncs.xxx_reset(cd,outptr,outleft);
       if (outcount < 0) {
         errno = E2BIG;
         return -1;

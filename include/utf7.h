@@ -69,7 +69,7 @@ static int
 utf7_mbtowc (conv_t conv, ucs4_t *pwc, const unsigned char *s, int n)
 {
   state_t state = conv->istate;
-  int count = 0; /* number of input bytes already read */
+  unsigned int count = 0; /* number of input bytes already read */
   if (state & 3)
     goto active;
   else
@@ -78,7 +78,7 @@ utf7_mbtowc (conv_t conv, ucs4_t *pwc, const unsigned char *s, int n)
 inactive:
   {
     /* Here (state & 3) == 0 */
-    if (n < count+1)
+    if ((unsigned int)n < count+1)
       goto none;
     {
       unsigned char c = *s;
@@ -88,7 +88,7 @@ inactive:
         return count+1;
       }
       if (c == '+') {
-        if (n < count+2)
+        if ((unsigned int)n < count+2)
           goto none;
         if (s[1] == '-') {
           *pwc = (ucs4_t) '+';
@@ -159,7 +159,7 @@ active:
         else
           break;
       }
-      if (n < count+base64count+1)
+      if ((unsigned int)n < count+base64count+1)
         goto none;
     }
     /* Here k = kmax > 0, hence base64count > 0. */
@@ -328,7 +328,7 @@ utf7_reset (conv_t conv, unsigned char *r, int n)
   if (state & 3) {
     /* deactivate base64 encoding */
     unsigned int count = ((state & 3) >= 2 ? 1 : 0) + 1;
-    if (n < count)
+    if ((unsigned int)n < count)
       return RET_TOOSMALL;
     if ((state & 3) >= 2) {
       unsigned int i = state & -4;
