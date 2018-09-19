@@ -3,7 +3,7 @@
 
 libiconv for Windows (Microsoft Visual Studio Compiler) based on [GNU libiconv][1]
 
-Soltion file update to Visual Studio 2017 only.
+Solution file update to Visual Studio 2017 only.
 Update to libiconv 1.15
 
 With pre-built configurations:
@@ -17,7 +17,7 @@ With pre-built configurations:
 - Debug x64
 - Debug Static x64
 
-Code based on [GNU libiconv][1]  
+Code base on [GNU libiconv][1]  
 and this article：[How to Build libiconv with Microsoft Visual Studio / PARK Youngho][2]  
 Thanks
 
