@@ -58,8 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\iconv.h" />
-    <ClInclude Include="include\libcharset.h" />
-    <ClInclude Include="include\localcharset.h" />
+    <ClInclude Include="libiconv-1.16\include\iconv.h" />
+    <ClInclude Include="libiconv-1.16\libcharset\include\libcharset.h" />
+    <ClInclude Include="libiconv-1.16\libcharset\include\localcharset.h" />
     <ClInclude Include="libiconv-1.16\lib\aliases.h" />
     <ClInclude Include="libiconv-1.16\lib\aliases2.h" />
     <ClInclude Include="libiconv-1.16\lib\aliases_aix.h" />
@@ -365,7 +366,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetExt>.dll</TargetExt>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
@@ -373,7 +374,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetExt>.lib</TargetExt>
     <TargetName>$(ProjectName)StaticD</TargetName>
   </PropertyGroup>
@@ -381,7 +382,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib64\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetExt>.dll</TargetExt>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
@@ -389,7 +390,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)lib64\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetExt>.lib</TargetExt>
     <TargetName>$(ProjectName)StaticD</TargetName>
   </PropertyGroup>
@@ -397,26 +398,26 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)lib64\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|Win32'">
     <OutDir>$(SolutionDir)lib\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetName>$(ProjectName)Static</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseStatic|x64'">
     <OutDir>$(SolutionDir)lib64\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)\$(Configuration)_$(Platform)\</IntDir>
     <TargetExt>.lib</TargetExt>
-    <IncludePath>libiconv-1.16;include;$(IncludePath)</IncludePath>
+    <IncludePath>libiconv-1.16\libcharset\include;libiconv-1.16\include;libiconv-1.16;$(IncludePath)</IncludePath>
     <TargetName>$(ProjectName)Static</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

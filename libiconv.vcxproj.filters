@@ -17,6 +17,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="libiconv-1.16\include">
+      <UniqueIdentifier>{cddf6ef1-6edd-4397-9cb7-a65d29fa5d10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libiconv-1.16\libcharset\include">
+      <UniqueIdentifier>{9055e35b-e34a-4711-bd66-ddcbf6a8e26e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
@@ -73,12 +79,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\libcharset.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\localcharset.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="include\iconv.h">
       <Filter>include</Filter>
     </ClInclude>
@@ -741,6 +741,15 @@
     </ClInclude>
     <ClInclude Include="libiconv-1.16\lib\rk1048.h">
       <Filter>libiconv-1.16\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="libiconv-1.16\libcharset\include\localcharset.h">
+      <Filter>libiconv-1.16\libcharset\include</Filter>
+    </ClInclude>
+    <ClInclude Include="libiconv-1.16\libcharset\include\libcharset.h">
+      <Filter>libiconv-1.16\libcharset\include</Filter>
+    </ClInclude>
+    <ClInclude Include="libiconv-1.16\include\iconv.h">
+      <Filter>libiconv-1.16\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
