@@ -1,5 +1,6 @@
 ﻿# libiconv for Windows
 ----------------------
+![MSBuild](https://github.com/pffang/libiconv-for-Windows/actions/workflows/msbuild.yml/badge.svg)
 
 libiconv for Windows (Microsoft Visual Studio Compiler) based on [GNU libiconv][1]
 
