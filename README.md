@@ -4,7 +4,7 @@
 
 libiconv for Windows (Microsoft Visual Studio Compiler) based on [GNU libiconv][1]
 
-Solution file update to Visual Studio 2019 only.
+Solution file update to Visual Studio 2022 only.
 Update to libiconv 1.16
 
 With pre-built configurations:
