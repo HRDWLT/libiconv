@@ -2,11 +2,26 @@
 ----------------------
 ![MSBuild](https://github.com/pffang/libiconv-for-Windows/actions/workflows/msbuild.yml/badge.svg)
 
-`libiconv` for Windows (Microsoft Visual Studio Compiler) based on [GNU libiconv][1]
+The `libiconv` library for Windows (via the **M**icrosoft **V**isual **S**tudio **C**ompiler (MVSC)) based on [GNU libiconv][1].
 
-Solution file update to Visual Studio 2022 only.
+Solution file updated to Visual Studio 2022 **only**.
 
-Update to libiconv `1.17`.
+## Version
+
+`libiconv` library version `1.17`
+
+# How To Build
+
+1. Download and install [Visual Studio 2022 Community Edition][4].
+   - If applicable, use another accompanying edition for Visual Studio 2022 (e.g. Professional, Enterprise, etc.).
+   - **(Required)** Ensure to select the "*Desktop development with C++*" component from the "*Visual Studio Installer*" to get all the x86 and x64 build tools.
+2. **(Optional)** For compiling ARM64 builds, ensure to install "*MSVC v### - VS 2022 C++ ARM64 build tools (latest)*" individual component from the *Visual Studio Installer* (where '###' is the current version of MSVC).
+   - The "*Visual Studio Installer*" can be launched by typing this name into the Windows search on Windows 11.
+3. Clone this repository and open up the `Liblconv.sln` project file in Visual Studio.
+4. Select the architecture (e.g. `ARM64`, `x64`, `x86`) and configuration (e.g. `Release`, `ReleaseStatic`, `Debug`, `DebugStatic`) to build for.
+5. From the "*Build*" menu, click on "*Build Solution*."
+6. Wait for the build to finish.
+   When finished, ensure that the build was successful.
 
 # Supported Builds
 
@@ -80,9 +95,10 @@ Update to libiconv `1.17`.
 ----------------------
 ## Licensing
 
-Depend on GNU libiconv [LGPL3.0][3] 
+Based on the GNU license provided by `libiconv` [LGPL3.0][3].
 
 [1]: https://www.gnu.org/software/libiconv
 [2]: http://www.codeproject.com/Articles/302012/How-to-Build-libiconv-with-Microsoft-Visual-Studio
 [3]: https://www.gnu.org/licenses/lgpl.html
+[ 4 ]: https://visualstudio.microsoft.com/vs/community/
 
