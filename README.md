@@ -95,7 +95,7 @@ Solution file updated to Visual Studio 2022 **only**.
 ----------------------
 ## Licensing
 
-Based on the GNU license provided by `libiconv` [LGPL3.0][3].
+Refer to the GNU license provided by `libiconv` [LGPL3.0][3].
 
 [1]: https://www.gnu.org/software/libiconv
 [2]: http://www.codeproject.com/Articles/302012/How-to-Build-libiconv-with-Microsoft-Visual-Studio
