@@ -31,6 +31,12 @@ obj/
 [Rr]elease*/
 Ankh.NoLoad
 
+# Visual Studio Output Folders
+output/
+ARM64/
+x64/
+Win32/
+
 #MonoDevelop
 *.pidb
 *.userprefs
