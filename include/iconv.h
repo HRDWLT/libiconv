@@ -21,7 +21,11 @@
 #define _LIBICONV_H
 
 #define _LIBICONV_VERSION 0x0111    /* version number: (major<<8) + minor */
-extern __declspec (dllimport) int _libiconv_version; /* Likewise */
+extern 
+#if defined(WIN32) || defined(WIN64)
+__declspec (dllimport) 
+#endif
+int _libiconv_version; /* Likewise */
 
 /* We would like to #include any system header file which could define
    iconv_t, 1. in order to eliminate the risk that the user gets compilation
